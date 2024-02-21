@@ -1,0 +1,29 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width"/>
+    <title>Party!</title>
+    @* Bootstrap *@
+    <link href="/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 mx-auto m-5">
+                <div class="card">
+                    <img src="/images/1.PNG" class="card-img-top" alt="Party!!">
+                    <div class="card-body">
+                        <h3 class="card-text">PARTY ALL YOU CAN!</h3>
+                        <p class="card-text">The hangover only lasts a day, but the memories last a lifetime.</p>
+                    </div>
+                    <a asp-action="RsvpForm" class="btn btn-primary m-3">RSVP Now!</a>
+                </div>
+            </div> 
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+@model PartyInvites.Models.GuestResponse
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Rsvp Form</title>
+    @* Bootstrap *@
+    <link href="/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    @* Css *@
+    <link href="/css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 mx-auto m-5">
+                <div class="card">
+                    <div class="card-body">
+                        <div asp-validation-summary="All"></div>
+                        <form asp-action="RsvpForm" method="post">
+                            <div class="m-2">
+                                <label asp-for="Name" class="form-label">Your Name:</label>
+                                <input asp-for="Name" class="form-control">
+                            </div>
+                            <div class="m-2">
+                                <label asp-for="Email" class="form-label">Your Email:</label>
+                                <input asp-for="Email" class="form-control">
+                            </div>
+                            <div class="m-2">
+                                <label asp-for="Phone" class="form-label">Your Phone:</label>
+                                <input asp-for="Phone" class="form-control">
+                            </div>
+                            <div class="m-2">
+                                <label asp-for="WillAttend" class="form-label">Will you attend?</label>
+                                <select asp-for="WillAttend" class="form-select">
+                                    <option value="">Choose option</option>
+                                    <option value="true">Yes, I'll be there</option>
+                                    <option value="false">No, I can't come</option>
+                                </select>
+                            </div>
+                            <div class="d-grid gap-2 mt-4 mx-2 my-2">
+                                <button class="btn btn-primary" type="submit">Submit Rsvp</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

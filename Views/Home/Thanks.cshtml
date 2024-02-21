@@ -1,0 +1,35 @@
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Party!</title>
+    @* Bootstrap *@
+    <link href="/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 mx-auto m-5">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h2 class="card-text">Thank You, @Model.Name!</h2>
+                        <hr />
+                        @if(Model?.WillAttend == true)
+                        {
+                        @:It's great that you're coming. The drinks are already in the fridge!
+                        }else{
+                        @:Sorry to hear that you can't make it, but thanks for letting us know.
+                        }
+                        <hr />
+                        <a asp-action="ListResponses" class="btn btn-primary">Coming to the party!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
